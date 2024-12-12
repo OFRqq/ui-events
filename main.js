@@ -24,15 +24,6 @@ interaction.addEventListener('animationend', jumpHandler)
 
 // Ga zelf verder met de overige elementen, aan de hand van de instructies
 // Maak bijvoorbeeld een bibber animatie als je op iets klikt
-let interaction1 = document.querySelector('a:nth-of-type(1)')
-console.log(interaction1);
-
-interaction1.addEventListener('click', enlarge);
-function enlarge(e){
-  e.target.classList.toggle('enlarge')
- 
-  // interaction1.classlist.toggle()
-}
 
 // Stap 1: querySelector
 // let bibberLink = document.querySelector...
@@ -42,3 +33,20 @@ function enlarge(e){
 
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
 // bibberLink.classList.toggle...
+
+// enlarge interaction BTN 1
+let interaction1 = document.querySelector('a:nth-of-type(1)')
+
+interaction1.addEventListener('click', enlarge);
+function enlarge(e){
+  e.target.classList.toggle('enlarge')
+}
+
+// bibber interaction BTN 2
+let interaction2 = document.querySelector ('a:nth-of-type(2)')
+
+interaction2.addEventListener('click', bibber);
+function bibber(e){
+  e.target.classList.toggle('bibber1')
+  console.log('eet poep')
+}
