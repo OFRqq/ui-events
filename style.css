@@ -40,6 +40,7 @@ a {
   &:focus {
     color: var(--primary);
     border-color: var(--primary);
+    outline-color:white;
   }
 }
 
@@ -94,39 +95,65 @@ a:nth-of-type(12) {
 
 /* Hieronder komen jouw animaties */
 
-/* class enlarge*/
+/* class enlarge BTN1*/
 .enlarge {
-  transform: scaleY(1.25);
+  transform: scale(1.25);
   transition: 0.3s ease-in;
 }
 
-/* class bibber*/
-.bibber1 {
-  animation: bibber 1s infinite;
+/* class bibber BTN2*/
+.bibber {
+  animation: bibber .3s infinite;
 }
 
 @keyframes bibber {
   0% {
-    left: 0px;
+    transform: translate(0);
   }
-
   20% {
-    left:2px;
+    transform: translate(-2px);
   }
-
   40% {
-    left:0px;
+    transform: translate(0);   
   }
-
   60% {
-    right:2px;
+    transform: translate(2px);
   }
-
-  80% {
-    right:0px;
+  80% {transform: translate(0px);
   }
-
   100% {
-    left:0px;
+    transform: translate(-2px);
   }
+}
+
+/*class outline BTN3*/
+.outline-BTN3 {
+  outline: 2px solid var(--highlight-primary);
+  outline-offset: -2px;
+  transition: outline-offset .2s ease-in-out;
+}
+
+.outline {
+  color:var(--highlight-primary);
+  outline-offset: 5px;
+}
+
+/*class realistic BTN4*/
+.span {
+  margin:0px -15px 0px -15px;
+  display:block;
+  padding: 15px 45px;
+  border:var(--line) solid var(--highlight-primary);
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--highlight-primary);
+  transform: translateY(-6px);
+  transition: transform ease 0.1s;
+}
+
+
+.realistic {
+  transition:.1s;
+  transform: translateY(1px);
 }

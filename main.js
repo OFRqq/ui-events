@@ -47,6 +47,21 @@ let interaction2 = document.querySelector ('a:nth-of-type(2)')
 
 interaction2.addEventListener('click', bibber);
 function bibber(e){
-  e.target.classList.toggle('bibber1')
-  console.log('eet poep')
+  e.target.classList.toggle('bibber')
+}
+
+let interaction3 = document.querySelector('a:nth-of-type(3)')
+
+interaction3.addEventListener('click', outline);
+function outline(e){
+  e.target.classList.toggle('outline')
+}
+
+let interaction4 = document.querySelector('a:nth-of-type(4)')
+
+interaction4.addEventListener('click', realistic);
+function realistic(e){
+  e.target.classList.toggle('realistic')
+  
+interaction4.addEventListener('animationend', realistic)
 }
